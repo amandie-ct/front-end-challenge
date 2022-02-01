@@ -6,6 +6,7 @@ import Movielist from './Movielist';
 const Main = () => {
 
     const [ genres, setGenres ] = useState('');
+    const [ popularMoviesList, setPopularMoviesList ] = useState('');
 
     const genreQuery = () => {
         const baseURL = 'https://api.themoviedb.org/3/genre/movie/list';
@@ -42,12 +43,45 @@ const Main = () => {
         getGenres()
     }, []);
 
-    
+    const popularQuery = () => {
+        const baseURL = 'https://api.themoviedb.org/3/movie/popular';
+        const apiKey = '27356b4d294f73dd67d7feb0d32d50e9';
+        const language = 'pt-BR';
+        const page = 1;
+
+        const queryParams = new URLSearchParams({
+            api_key: apiKey,
+            language: language,
+            page: page
+        });
+
+        const popularQueryString = baseURL.concat('?', queryParams.toString());
+
+        return popularQueryString;
+    }
+
+    const getPopular = () => {
+        fetch(popularQuery())
+        .then(res => {
+            if (!res.ok){
+                throw Error('Não foi possível encontrar o conteúdo')
+            }
+            return res.json()
+        })
+        .then(data => {
+            setPopularMoviesList(data.results)
+        })
+    }
+
+    useEffect(() => {
+        getPopular();
+    }, [])
+
     return (
         <main className="main">
                 <Header/>
                 <Navigation genres={genres}/>
-                <Movielist/>
+                <Movielist popularMoviesList={popularMoviesList}/>
         </main>
     );
 }

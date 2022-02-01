@@ -1,10 +1,12 @@
 import Movie from './Movie';
 import Pagination from './Pagination';
 
-const Movielist = () => {
+const Movielist = ({ popularMoviesList }) => {
+
     return (
         <main className="movie-card">
-            <Movie/>
+            {popularMoviesList && popularMoviesList.map((movie) => 
+                <Movie movie={movie} key={movie.id}/>)}
             <Pagination/>
         </main>
     );

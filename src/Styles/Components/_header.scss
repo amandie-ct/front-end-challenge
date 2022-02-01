@@ -1,6 +1,6 @@
 @use '../variables';  
 
-.header{
+.header {
     background-color: variables.$mild-purple;
     width: 100%;
     display: flex;
@@ -9,7 +9,7 @@
     height: 56px;
 }
 
-.logo{
+.logo {
     width: 140px;
     height: auto;
     padding: variables.$base-padding;
