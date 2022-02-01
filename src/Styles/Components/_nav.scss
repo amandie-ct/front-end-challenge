@@ -1,0 +1,27 @@
+@use '../variables';
+@use 'sass:math';
+
+.nav {
+    background-color: variables.$deep-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    justify-content: flex-start;
+
+    .title {
+        color: variables.$white;
+        margin: variables.$base-margin * 3 0;
+
+    }
+    
+    p {
+        text-transform: uppercase;
+        color: variables.$white;
+        font-size: variables.$font-size-sm;
+        font-weight: bold;
+        margin: variables.$base-margin 0;
+    }
+}

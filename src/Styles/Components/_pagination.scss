@@ -1,0 +1,9 @@
+@use '../variables';
+
+.pages{
+    color: variables.$mild-purple;
+    font-family: variables.$base-font-family;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

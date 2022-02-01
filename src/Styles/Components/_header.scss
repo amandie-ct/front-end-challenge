@@ -1,0 +1,17 @@
+@use '../variables';  
+
+.header{
+    background-color: variables.$mild-purple;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+}
+
+.logo{
+    width: 140px;
+    height: auto;
+    padding: variables.$base-padding;
+
+}

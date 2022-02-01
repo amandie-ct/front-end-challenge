@@ -1,0 +1,14 @@
+// variaveis e funçoes
+@use './variables';
+
+// base e layouts
+@use './base';
+@use './breakpoints';
+@use './grid';
+
+// componentes
+@use 'components/header';
+@use 'components/nav';
+@use 'components/button';
+@use 'components/movie';
+@use 'components/pagination';

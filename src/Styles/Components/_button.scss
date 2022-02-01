@@ -1,0 +1,38 @@
+@use '../variables';
+@use 'sass:math';
+
+.button-filter {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: variables.$base-margin;
+    background-color: variables.$white;
+    border-radius: variables.$base-border-radius;
+    padding: 6px 16px;
+    height: 32px;
+
+    p {
+        color: variables.$black;
+        font-family: variables.$base-font-family;
+        font-weight: bold;
+        font-size: variables.$base-font-size;
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+.button-filter:active {
+    background-color: variables.$orange;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: variables.$base-margin * 2 variables.$base-margin;
+}
