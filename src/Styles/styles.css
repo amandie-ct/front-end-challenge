@@ -528,7 +528,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   font-size: 14px;
   max-width: 154px;
 }
@@ -554,6 +554,26 @@ img {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media (min-width: 960px) {
+  .responsive .header {
+    justify-content: flex-start;
+  }
+  .responsive .header .logo {
+    margin-left: 3rem;
+  }
+}
+.responsive .nav h1 {
+  font-size: 2rem;
+  margin: 3rem;
+}
+.responsive .button-container {
+  margin-bottom: 3rem;
+  margin: 2.25rem 0;
+}
+.responsive .nav-container > * {
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

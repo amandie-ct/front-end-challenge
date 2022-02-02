@@ -78,7 +78,7 @@ const Main = () => {
     }, [])
 
     return (
-        <main className="main">
+        <main className="main responsive">
                 <Header/>
                 <Navigation genres={genres}/>
                 <Movielist popularMoviesList={popularMoviesList}/>

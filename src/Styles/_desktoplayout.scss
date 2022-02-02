@@ -1,0 +1,37 @@
+@use './variables';
+@use './breakpoints';
+@use './grid';
+
+.responsive {
+    @include breakpoints.lg {
+        .header {
+            justify-content: flex-start;
+
+            .logo {
+                margin-left: variables.$base-margin * 4;
+            }
+        }
+    }
+        .nav {
+
+            h1 {
+                font-size: variables.$font-size-lg;
+                margin: variables.$base-margin * 4;
+            }
+        }
+
+        .button-container {
+            margin-bottom: variables.$base-margin * 4;
+            margin: 0 variables.$base-margin * 3;
+        }
+
+        .nav-container > * {
+            justify-content: center;
+        }
+
+        .movie-container {
+            margin: 0 variables.$base-margin * 4;
+        }
+
+
+}

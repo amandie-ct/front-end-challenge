@@ -12,3 +12,7 @@
 @use 'components/button';
 @use 'components/movie';
 @use 'components/pagination';
+
+// breakpoint desktop
+@use './desktoplayout';
+

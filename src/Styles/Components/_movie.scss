@@ -12,9 +12,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         font-size: variables.$font-size-sm;
-        max-width: 154px;
     }
 
     .date {
@@ -25,7 +24,6 @@
     .movie {
         border-radius: variables.$base-border-radius;
     }
-
 }
 
 .movie-container {
